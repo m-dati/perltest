@@ -27,13 +27,28 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run initial check
-        run: which perl && pwd 
+        run: which perl && pwd
 
       # Runs a set of commands using the runners shell
+      # Runs test with VAR defined
       - name: Run test1
         run: |
-          echo start test
+          echo start test 1
           pwd
+          export VAR=1000002
+          echo $VAR
           cd nestedmod && ./test_main.pl
+          echo exit -$?-
           pwd
+
+      # start test with VAR undef.
+      - name: Run test2
+        run: |
+          echo start test 2
+          ped
+          echo $VAR
+          cd nestedmod && ./test_main.pl
+          echo exit -$?-
+          pwd
+
 
