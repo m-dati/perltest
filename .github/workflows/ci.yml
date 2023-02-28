@@ -33,7 +33,7 @@ jobs:
       - name: Run test1
         run: |
           echo start test
-          cd /home/runner/work/perltest/perltest
-          cd nestedmod && test_main.pl
+          pwd
+          cd nestedmod && ./test_main.pl
           pwd
 
