@@ -32,7 +32,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run test1
         run: |
-          echo start test,
+          echo start test
+          pwd
+          cd /home/runner/work/perltest/perltest
           cd nestedmod
           test_main.pl
 
