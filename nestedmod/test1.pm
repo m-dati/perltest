@@ -1,4 +1,4 @@
-# tests/publiccloud/run_ltp.pm
+# tests1.pm
 package test1;
  
 our $newvar = 1;
